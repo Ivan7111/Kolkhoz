@@ -4,24 +4,27 @@ Example.PaintPanel = function (containerId) {
 
 Example.PaintPanel.prototype = {
 
-	init: function () {
-		this._initMarkup(this.containerId);
-	},
+    init: function () {
+        this._initMarkup(this.containerId);
+    },
 
-	_initMarkup: function (containerId) {
-		var container = $('#' + containerId);
+    _initMarkup: function (containerId) {
+        var container = $('#' + containerId);
 
-		var self = this;
-		container.append('<div class="sc-no-default-cmd">Agriculture Component</div>');
-		//container.append('<button id="newButton" type="button">Образцы</button>');
-		//container.append('<button id="DNALaunchButton" type="button">Запуск агента ДНК</button>');
-		//container.append('<input id="DNAInput" type="text" maxlength="3" size="4">');
-		//container.append('<button id="FieldLaunchButton" type="button">Запуск агента Почвы</button>');
-		//container.append('<button id="FarmLaunchButton" type="button">Запуск агента Фермы</button>');
-		//container.append('<input id="FarmInput" type="text" size="30">');
-		//container.append('<button id="ass" type="button">Тык</button>');
-		//container.append('<button id="asscrack" type="button">Антитык</button>');
-		container.append(`<h1> ИСС по сельскому хозяйству </h1>
+        var self = this;
+        container.append('<div class="sc-no-default-cmd">Agriculture Component</div>');
+        //container.append('<button id="newButton" type="button">Образцы</button>');
+        //container.append('<button id="DNALaunchButton" type="button">Запуск агента ДНК</button>');
+        //container.append('<input id="DNAInput" type="text" maxlength="3" size="4">');
+        //container.append('<button id="FieldLaunchButton" type="button">Запуск агента Почвы</button>');
+        //container.append('<button id="FarmLaunchButton" type="button">Запуск агента Фермы</button>');
+        //container.append('<input id="FarmInput" type="text" size="30">');
+        //container.append('<button id="ass" type="button">Тык</button>');
+        //container.append('<button id="asscrack" type="button">Антитык</button>');
+
+        container.append('<button id="_soilDropdown" type="button">_soilDropdown</button>');
+
+        container.append(`<h1> ИСС по сельскому хозяйству </h1>
 
     <img src="https://www.starfate.ru/assets/images/sonnik/pole.jpg" alt="Ридно село, де я лопатаю чирпав гивно"
         width="20%" height="20%">
@@ -180,147 +183,164 @@ Example.PaintPanel.prototype = {
     <hr align="center" width="100%" size="2" color="#ff0000" />
     <br />`);
 
-		$('#asscrack').click(function () {
-			//var table = container.getElementById("table_id");
-			//table.parentNode.removeChild(table);
-		})
+        $('#asscrack').click(function () {
+            //var table = container.getElementById("table_id");
+            //table.parentNode.removeChild(table);
+        })
 
-		$('#ass').click(function () {
-			SCWeb.core.Server.resolveScAddr(['Initer'], function (keynodes) {
-				addr = keynodes['Initer'];
-				window.sctpClient.create_link().done(function (link) {
-					window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr, link).done(function () {
-					});
-					setTimeout(() => {
-						window.sctpClient.get_link_content(link).done(function (tableContent) {
-							container.append(tableContent);
-							SCWeb.core.Server.resolveScAddr(['Garbage'], function (keynodes) {
-								addr1 = keynodes['Garbage'];
-								window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr1, link).done(function () {
-								});
-							});
-						});
-					}, 1000);
-				});
+        $('#ass').click(function () {
+            SCWeb.core.Server.resolveScAddr(['Initer'], function (keynodes) {
+                addr = keynodes['Initer'];
+                window.sctpClient.create_link().done(function (link) {
+                    window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr, link).done(function () {
+                    });
+                    setTimeout(() => {
+                        window.sctpClient.get_link_content(link).done(function (tableContent) {
+                            container.append(tableContent);
+                            SCWeb.core.Server.resolveScAddr(['Garbage'], function (keynodes) {
+                                addr1 = keynodes['Garbage'];
+                                window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr1, link).done(function () {
+                                });
+                            });
+                        });
+                    }, 1000);
+                });
 
-				//container.append('<div>Hello</div>');
-			});
-		})
+                //container.append('<div>Hello</div>');
+            });
+        })
 
-		$('#newButton').click(function () {
-			self._showSamples();
-		});
+        $('#newButton').click(function () {
+            self._showSamples();
+        });
 
-		$('#testButton').click(function () {
-			self._testMethod();
-		});
+        $('#testButton').click(function () {
+            self._testMethod();
+        });
 
-		$('#DNALaunchButton').click(function () {
-			if (DNAInput.value == '') {
-				alert('Введите пареметры!');
-				return;
-			}
-			if (!Number.isInteger(Number(DNAInput.value))) {
-				alert('Ввод должен быть целым числом!');
-				return;
-			}
-			SCWeb.core.Server.resolveScAddr(['DNASample'], function (keynodes) {
-				for (let i = 0; i < DNAInput.value; i++) {
-					self._launchDNAAgent(DNAInput.value);
-				}
-				var samples = keynodes['DNASample'];
-				SCWeb.core.Server.resolveScAddr(["ui_menu_view_full_semantic_neighborhood"], function (data) {
-					var cmd = data["ui_menu_view_full_semantic_neighborhood"];
-					SCWeb.core.Main.doCommand(cmd,
-						[samples], function (result) {
-							if (result.question != undefined) {
-								SCWeb.ui.WindowManager.appendHistoryItem(result.question);
-							}
-						});
-				});
-				alert(DNAInput.value + ' oбразца(ов) сгенерировано.');
-			});
-		});
+        $('#DNALaunchButton').click(function () {
+            if (DNAInput.value == '') {
+                alert('Введите пареметры!');
+                return;
+            }
+            if (!Number.isInteger(Number(DNAInput.value))) {
+                alert('Ввод должен быть целым числом!');
+                return;
+            }
+            SCWeb.core.Server.resolveScAddr(['DNASample'], function (keynodes) {
+                for (let i = 0; i < DNAInput.value; i++) {
+                    self._launchDNAAgent(DNAInput.value);
+                }
+                var samples = keynodes['DNASample'];
+                SCWeb.core.Server.resolveScAddr(["ui_menu_view_full_semantic_neighborhood"], function (data) {
+                    var cmd = data["ui_menu_view_full_semantic_neighborhood"];
+                    SCWeb.core.Main.doCommand(cmd,
+                        [samples], function (result) {
+                            if (result.question != undefined) {
+                                SCWeb.ui.WindowManager.appendHistoryItem(result.question);
+                            }
+                        });
+                });
+                alert(DNAInput.value + ' oбразца(ов) сгенерировано.');
+            });
+        });
 
-		$('#FieldLaunchButton').click(function () {
-			self._launchFieldAgent();
-		});
+        $('#FieldLaunchButton').click(function () {
+            self._launchFieldAgent();
+        });
 
-		$('#FarmLaunchButton').click(function () {
-			self._launchFarmAgent();
-		});
-	},
+        $('#FarmLaunchButton').click(function () {
+            self._launchFarmAgent();
+        });
 
-	/* Call agent of searching semantic neighborhood,
-	send ui_main_menu node as parameter and add it in web window history
-	*/
+        $('#_soilDropdown').click(function () {
+            self._soilDropdown();
+        });
+    },
 
-	_soilDropdown: function () {
-		console.log("finding soil types..");
-		var main_menu_addr, nrel_main_idtf_addr;
-		// Resolve sc-addrs.
-		SCWeb.core.Server.resolveScAddr(['Soil'], function (keynodes) {
-			soil_addr = keynodes['Soil'];
-			// Resolve sc-addr of ui_menu_view_full_semantic_neighborhood node
-			window.sctpClient.iterate_elements(SctpIteratorType.SCTP_ITERATOR_3F_A_A, [
-				soil_addr,
-				sc_type_arc_pos_const_perm,
-				sc_type_link]).
-				done(function (identifiers) {
-					identifiers.forEach(soilNode =>
-						window.sctpClient.get_link_content(soilNode[2], 'string').done(function (content) {
-							var select = document.getElementById('soilType');
+    /* Call agent of searching semantic neighborhood,
+    send ui_main_menu node as parameter and add it in web window history
+    */
 
-							var option = document.createElement('option');
-							option.text = option.value = content;
-							select.add(option, 0);
-							alert('Soil: ' + content);
-						}));
-				});
-		});
-	},
+    _soilDropdown: function () {
+        console.log("finding soil types.. + Culture");
+        var main_menu_addr, nrel_main_idtf_addr;
+        // Resolve sc-addrs.
+        SCWeb.core.Server.resolveScAddr(['Culture'], function (keynodes) {
+            soil_addr = keynodes['Culture'];
+            // Resolve sc-addr of ui_menu_view_full_semantic_neighborhood node
+            window.sctpClient.iterate_elements(SctpIteratorType.SCTP_ITERATOR_3F_A_A, [
+                soil_addr,
+                sc_type_arc_pos_const_perm,
+                sc_type_node]).
+                done(function (identifiers) {
+                    console.log("iterator");
+                    console.log(identifiers);
+
+                    identifiers.forEach(soilNode => {
+
+                        console.log("have node");
+                        console.log(soilNode);
+                        console.log(soilNode[2]);
+
+                        window.sctpClient.get_link_content(soilNode[2], 'string').done(function (content) {
+                            console.log("try add");
+                            console.log(content);
+
+                            var select = document.getElementById("soilType");
+
+                            var option = document.createElement('option');
+                            option.text = option.value = content;
+                            select.add(option, 0);
+                            alert('Soil: ' + content);
+                        }
+                        )
+                    });
+                });
+        });
+    },
 
 
-	_assTest: function () {
+    _assTest: function () {
 
-	},
+    },
 
-	_launchDNAAgent: function () {
-		SCWeb.core.Server.resolveScAddr(['ReadDNAHere'], function (keynodes) {
-			addr = keynodes['ReadDNAHere'];
-			window.sctpClient.create_node(sc_type_const | sc_type_node | sc_type_node_struct).done(function (node) {
-				window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr, node).done(function () {
-				});
-			});
-		});
-	},
+    _launchDNAAgent: function () {
+        SCWeb.core.Server.resolveScAddr(['ReadDNAHere'], function (keynodes) {
+            addr = keynodes['ReadDNAHere'];
+            window.sctpClient.create_node(sc_type_const | sc_type_node | sc_type_node_struct).done(function (node) {
+                window.sctpClient.create_arc(sc_type_arc_pos_const_perm, addr, node).done(function () {
+                });
+            });
+        });
+    },
 
-	_launchFieldAgent: function () {
-		alert('Test success!');
-	},
+    _launchFieldAgent: function () {
+        alert('Test success!');
+    },
 
-	_launchFarmAgent: function () {
-		alert('Test success!');
-	},
+    _launchFarmAgent: function () {
+        alert('Test success!');
+    },
 
-	_testMethod: function () {
-		alert('Test success!');
-	},
+    _testMethod: function () {
+        alert('Test success!');
+    },
 
-	_showSamples: function () {
-		var addr;
-		SCWeb.core.Server.resolveScAddr(['DNASample'], function (keynodes) {
-			addr = keynodes['DNASample'];
-			SCWeb.core.Server.resolveScAddr(["ui_menu_view_full_semantic_neighborhood"],
-				function (data) {
-					var cmd = data["ui_menu_view_full_semantic_neighborhood"];
-					SCWeb.core.Main.doCommand(cmd,
-						[addr], function (result) {
-							if (result.question != undefined) {
-								SCWeb.ui.WindowManager.appendHistoryItem(result.question);
-							}
-						});
-				});
-		});
-	}
+    _showSamples: function () {
+        var addr;
+        SCWeb.core.Server.resolveScAddr(['DNASample'], function (keynodes) {
+            addr = keynodes['DNASample'];
+            SCWeb.core.Server.resolveScAddr(["ui_menu_view_full_semantic_neighborhood"],
+                function (data) {
+                    var cmd = data["ui_menu_view_full_semantic_neighborhood"];
+                    SCWeb.core.Main.doCommand(cmd,
+                        [addr], function (result) {
+                            if (result.question != undefined) {
+                                SCWeb.ui.WindowManager.appendHistoryItem(result.question);
+                            }
+                        });
+                });
+        });
+    }
 };
