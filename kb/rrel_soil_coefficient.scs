@@ -1,0 +1,18 @@
+rrel_soil_coefficient <- sc_node_role_relation;
+
+ => nrel_main_idtf: 
+   [коэффициент урожайности' ] (*<- lang_ru;;*);
+   [soil coefficient' ] (*<- lang_en;;*);
+
+<- rrel_key_sc_element: ... (*
+  <- definition;;
+  => nrel_main_idtf: [Определение (коэффициент урожайности')](*<- lang_ru;;*);;
+  
+  <= nrel_sc_text_translation: ...(*->[Коэффициент урожайности - пользователи, производственные задания, оборудование, физические среды и социальные условия, в которых используют продукт.](*<-lang_ru;;*);;*);;
+*); 
+
+<- oriented_relation;
+<- binary_relation; 
+<- asymmetric_relation;
+<- antireflexive_relation;
+<|- transitive_relation;;

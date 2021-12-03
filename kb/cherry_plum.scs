@@ -1,0 +1,22 @@
+cherry_plum <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [алыча] (* <- lang_ru;; *);
+    [cherry plum] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Алыча - плодовое деревянистое растение. Одна из исходных форм сливы домашней](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [Гористая местность на Тянь-Шане, Балканах, в Средней и Малой Азии, в Иране, на Северном Кавказе и Закавказье, в Молдавии и на юге Украины];
+
+=> nrel_context_of_use: {
+	medicine;
+	food;
+	wood
+};;
+
+

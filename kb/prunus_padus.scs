@@ -1,0 +1,22 @@
+prunus_padus <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [черемуха обыкновенная] (* <- lang_ru;; *);
+    [prunus padus] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Черемуха обыкновенная - вид невысоких деревьев из рода Сливаиз исходных форм сливы домашней](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [Влажные, богатые почвы с близким залеганием грунтовых вод. Растёт преимущественно по берегам рек, в приречных лесах (уремах) и кустарниковых зарослях, по лесным опушкам, на песках, по лесным прогалинам.];
+
+=> nrel_context_of_use: {
+	medicine;
+	liquor_production;
+	perfumery;
+	food;
+	wood
+};;

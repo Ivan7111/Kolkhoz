@@ -1,0 +1,29 @@
+ui_menu_search_fitting_cultures <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_search_fitting_cultures
+=> nrel_main_idtf: 
+	[Подобрать культуры]  
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Подбор подходящих культур]
+	(* <- lang_ru;; *);;
+
+ui_menu_search_fitting_cultures 
+=> nrel_main_idtf: 
+	[Search culture]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Search culture]
+	(* <- lang_en;; *);;
+
+ui_menu_search_fitting_cultures => ui_nrel_command_template:
+	[*
+		FindCulture _-> ._qFindCulture
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._FindCulture _<- question;;
+	*];;
+
+ui_menu_search_fitting_cultures => ui_nrel_command_lang_template: [Подобрать культуры123] (* <- lang_ru;; *);;
+ui_menu_search_fitting_cultures => ui_nrel_command_lang_template: [Подбор подходящих культур12345] (* <- lang_en;; *);;

@@ -1,0 +1,29 @@
+ui_menu_generate_DNA <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_generate_DNA
+=> nrel_main_idtf: 
+	[Сгенерировать последовательность ДНК]  
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Генерация последовательности ДНК]
+	(* <- lang_ru;; *);;
+
+ui_menu_generate_DNA 
+=> nrel_main_idtf: 
+	[Generate DNA sequence]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[DNA sequence generation]
+	(* <- lang_en;; *);;
+
+ui_menu_generate_DNA => ui_nrel_command_template:
+	[*
+		ReadDNAHere _-> ._qReadDNAHere
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._ReadDNAHere _<- question;;
+	*];;
+
+ui_menu_generate_DNA => ui_nrel_command_lang_template: [Новый образец ДНК] (* <- lang_ru;; *);;
+ui_menu_generate_DNA => ui_nrel_command_lang_template: [New DNA sample] (* <- lang_en;; *);;

@@ -1,0 +1,28 @@
+ERROR - Uncaught exception POST /api/cmd/do/ (127.0.0.1)
+HTTPServerRequest(protocol='http', host='localhost:8000', method='POST', uri='/api/cmd/do/', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Host': 'localhost:8000', 'User-Agent': 'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:87.0) Gecko/20100101 Firefox/87.0', 'Accept': '*/*', 'Accept-Language': 'en-US,en;q=0.5', 'Accept-Encoding': 'gzip, deflate', 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', 'X-Requested-With': 'XMLHttpRequest', 'Content-Length': '24', 'Origin': 'http://localhost:8000', 'Connection': 'keep-alive', 'Referer': 'http://localhost:8000/', 'Cookie': 'session_key="2|1:0|10:1620654357|11:session_key|60:OC9Xa3BhS1ZSRmk0cS9ZT2V6YjlmQmdWVlhneW9FcUFvbjlYcEtna2Vvdz0=|eab11c78cb60bad3964aded3d2b9120d66e1b5fb01cb12dc602cc99505500169"; first_time=0'})
+Traceback (most recent call last):
+  File "/home/ilya/.local/lib/python3.8/site-packages/tornado/web.py", line 1413, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/handlers/api.py", line 109, in post
+    if sctp_client.check_element(arg):
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/decorators.py", line 23, in wrapper
+    return func(*argv)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/sctp/client.py", line 144, in check_element
+    data = self.receiveData(10)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/decorators.py", line 23, in wrapper
+    return func(*argv)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/sctp/client.py", line 59, in receiveData
+    data = self.sock.recv(dataSize - len(res))
+ConnectionResetError: [Errno 104] Connection reset by peer
+ERROR - 500 POST /api/cmd/do/ (127.0.0.1) 76.03ms
+ERROR - Uncaught exception in /sctp
+Traceback (most recent call last):
+  File "/home/ilya/.local/lib/python3.8/site-packages/tornado/websocket.py", line 415, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/ws.py", line 125, in on_message
+    self.proxy.send(message)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/ws.py", line 85, in send
+    data = self.receiveData(10)
+  File "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-web/server/ws.py", line 54, in receiveData
+    raise RuntimeError("Read from broken socket")
+RuntimeError: Read from broken socket

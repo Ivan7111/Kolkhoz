@@ -1,0 +1,29 @@
+ui_menu_find_similarities <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_find_similarities
+=> nrel_main_idtf: 
+	[Найти схожие по области применения]  
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Поиск схожих по области применения]
+	(* <- lang_ru;; *);;
+
+ui_menu_find_similarities 
+=> nrel_main_idtf: 
+	[Find similar on context of use]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Looking for similarities]
+	(* <- lang_en;; *);;
+
+ui_menu_find_similarities => ui_nrel_command_template:
+	[*
+		SimilarContextOfUse _-> ._qSimilarContextOfUse
+			(*
+				_-> ui_arg_1;;
+			*);;
+		.SimilarContextOfUse _<- question;;
+	*];;
+
+ui_menu_find_similarities => ui_nrel_command_lang_template: [Найдено] (* <- lang_ru;; *);;
+ui_menu_find_similarities => ui_nrel_command_lang_template: [Found] (* <- lang_en;; *);;

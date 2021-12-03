@@ -1,0 +1,11 @@
+rrel_to <- sc_node_role_relation;
+
+ => nrel_main_idtf: 
+   [до' ] (*<- lang_ru;;*);
+   [to' ] (*<- lang_en;;*);
+
+<- oriented_relation;
+<- binary_relation; 
+<- asymmetric_relation;
+<- antireflexive_relation;
+<|- transitive_relation;;

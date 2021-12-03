@@ -1,0 +1,25 @@
+cow <- sc_node_class;;
+fish <- sc_node_class;;
+
+cow => ProfitPerMonth: {
+	[100 litrov milk]
+};;
+
+
+cow => CostsPerMonth: {
+	[10 kg travi]
+};;
+
+
+fish => ProfitPerMonth: {
+	[2 kg meal]
+};;
+
+
+fish => CostsPerMonth: {
+	[1 kg korm]
+};;
+ProfitPerMonth <- sc_node_norole_relation;;
+CostsPerMonth <- sc_node_norole_relation;;
+
+CreateFerm<-sc_node_not_relation;;

@@ -1,0 +1,29 @@
+ui_menu_create_farm <- ui_user_command_class_atom; ui_user_command_class_view_kb; ui_one_argument_command_class;;
+
+ui_menu_create_farm
+=> nrel_main_idtf: 
+	[Создать ферму]  
+	(* <- lang_ru;; *);
+=> nrel_idtf: 
+	[Создание фермы]
+	(* <- lang_ru;; *);;
+
+ui_menu_create_farm 
+=> nrel_main_idtf: 
+	[Create farm]
+	(* <- lang_en;; *);
+=> nrel_idtf: 
+	[Farm creation]
+	(* <- lang_en;; *);;
+
+ui_menu_create_farm => ui_nrel_command_template:
+	[*
+		CreateFerm _-> ._CreateFerm
+			(*
+				_-> ui_arg_1;;
+			*);;
+		._CreateFerm _<- question;;
+	*];;
+
+ui_menu_create_farm => ui_nrel_command_lang_template: [Ферма] (* <- lang_ru;; *);;
+ui_menu_create_farm => ui_nrel_command_lang_template: [Farm] (* <- lang_en;; *);;

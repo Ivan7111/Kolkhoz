@@ -1,0 +1,5 @@
+nrel_result_profit <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [прибыль* ] (*<- lang_ru;;*);
+   [result profit* ] (*<- lang_en;;*);;

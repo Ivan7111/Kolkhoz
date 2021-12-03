@@ -1,0 +1,24 @@
+nrel_number_of_seeds_per_hectare <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [количество семян на га* ] (*<- lang_ru;;*);
+   [number of seeds per hectare* ] (*<- lang_en;;*);
+
+<- rrel_key_sc_element: ... (*
+  <- definition;;
+  => nrel_main_idtf: [Определение (количество семян на га*)](*<- lang_ru;;*);;
+  
+  <= nrel_sc_text_translation: ...(*->[количество семян на га - пользователи, производственные задания, оборудование, физические среды и социальные условия, в которых используют продукт.](*<-lang_ru;;*);;*);;
+*); 
+
+
+	=> nrel_first_domain:
+	agriculture;
+	=> nrel_second_domain:
+	value;
+
+<- oriented_relation;
+<- binary_relation; 
+<- asymmetric_relation;
+<- antireflexive_relation;
+<|- transitive_relation;;

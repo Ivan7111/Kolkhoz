@@ -1,0 +1,24 @@
+nrel_productivity_for_soil <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [урожайность почвы* ] (*<- lang_ru;;*);
+   [productivity for soil* ] (*<- lang_en;;*);
+
+<- rrel_key_sc_element: ... (*
+  <- definition;;
+  => nrel_main_idtf: [Определение (урожайность почвы*)](*<- lang_ru;;*);;
+  
+  <= nrel_sc_text_translation: ...(*->[Урожайность почвы - пользователи, производственные задания, оборудование, физические среды и социальные условия, в которых используют продукт.](*<-lang_ru;;*);;*);;
+*); 
+
+
+	=> nrel_first_domain:
+	agriculture;
+	=> nrel_second_domain:
+	...;
+
+<- oriented_relation;
+<- binary_relation; 
+<- asymmetric_relation;
+<- antireflexive_relation;
+<|- transitive_relation;;

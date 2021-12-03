@@ -1,0 +1,20 @@
+prunus_domestica <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [слива домашняя] (* <- lang_ru;; *);
+    [prunus domestica] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Слива домашняя - плодовое растение; вид рода Слива](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [Влажные, суглинистые, хорошо дренированные, прогреваемые и богатые на полезные вещества почвы.];
+
+=> nrel_context_of_use: {
+	medicine;
+	food;
+	wood
+};;

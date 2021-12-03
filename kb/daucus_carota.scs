@@ -1,0 +1,21 @@
+daucus_carota <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [морковь дикая] (* <- lang_ru;; *);
+    [daucus carota] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Морковь дикая - вид рода Морковь](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [Растет по краям полей, на залежах, сухих лугах, среди кустарников, по обочинам дорог, в садах и огородах.];
+
+=> nrel_context_of_use: {
+	medicine;
+	food
+};;
+
+

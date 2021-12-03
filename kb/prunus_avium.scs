@@ -1,0 +1,23 @@
+prunus_avium <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [черешня] (* <- lang_ru;; *);
+    [prunus avium] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Черешня - древесное растение рода Слива](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [В южный районах растёт в лесополосах, на окраинах населенных пунктов, в средней полосе встречается редко, подчас в совершенно непредсказуемых местах, туда, куда случайно ее занесут птицы.];
+
+=> nrel_context_of_use: {
+	medicine;
+	liquor_production;
+	perfumery;
+	food;
+	wood;
+	textile_production
+};;

@@ -1,0 +1,20 @@
+daucus_carota_subsp_sativus <- sc_node_class;
+
+=> nrel_main_idtf: 
+    [морковь посевная] (* <- lang_ru;; *);
+    [daucus carota subsp. sativus] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Морковь посевная - подвид вида Морковь дикая](*<-lang_ru;;*);;*);;
+*);
+
+=> nrel_habitat: [Повсеместно];
+
+=> nrel_context_of_use: {
+	medicine;
+	food
+};;
+

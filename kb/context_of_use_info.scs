@@ -1,0 +1,35 @@
+medicine <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [медицина] (* <- lang_ru;; *);
+    [medicine] (* <- lang_en;; *);;
+    
+food <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [пищевая промышленность] (* <- lang_ru;; *);
+    [food] (* <- lang_en;; *);;
+    
+wood <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [лесная промышленность] (* <- lang_ru;; *);
+    [wood] (* <- lang_en;; *);;
+    
+liquor_production <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [ликёрное производство] (* <- lang_ru;; *);
+    [liquor_production] (* <- lang_en;; *);;
+    
+perfumery <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [парфюмерия] (* <- lang_ru;; *);
+    [perfumery] (* <- lang_en;; *);;
+    
+textile_production <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [текстильное производство] (* <- lang_ru;; *);
+    [textile_production] (* <- lang_en;; *);;
+    
+cosmetology <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [косметология] (* <- lang_ru;; *);
+    [cosmetology] (* <- lang_en;; *);;
+

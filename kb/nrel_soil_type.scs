@@ -1,0 +1,5 @@
+nrel_soil_type <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [тип почвы* ] (*<- lang_ru;;*);
+   [soil type* ] (*<- lang_en;;*);;

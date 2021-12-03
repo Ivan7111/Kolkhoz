@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libsc-kpm-common.so -o ../../../bin/libsc-kpm-common.so CMakeFiles/sc-kpm-common.dir/sc_keynodes.c.o  -Wl,-rpath,/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/bin ../../../bin/libsc-core.so -lglib-2.0 -lgmodule-2.0 -lglib-2.0 -lgmodule-2.0 -lrocksdb 

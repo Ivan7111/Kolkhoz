@@ -1,0 +1,122 @@
+{
+	"BUILD_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/sctp-server_autogen",
+	"CMAKE_BINARY_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_SOURCE_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine",
+	"HEADERS" : 
+	[
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpClient.h",
+			"Mu",
+			"EWIEGA46WW/moc_sctpClient.cpp"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpCommand.h",
+			"Mu",
+			"EWIEGA46WW/moc_sctpCommand.cpp"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpEventManager.h",
+			"Mu",
+			"EWIEGA46WW/moc_sctpEventManager.cpp"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpServer.h",
+			"Mu",
+			"EWIEGA46WW/moc_sctpServer.cpp"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpStatistic.h",
+			"Mu",
+			"EWIEGA46WW/moc_sctpStatistic.cpp"
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/sctp-server_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/sctp-server_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"BOOST_ALL_NO_LIB",
+		"BOOST_FILESYSTEM_DYN_LINK",
+		"BOOST_PYTHON_DYN_LINK",
+		"QT_CORE_LIB",
+		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-memory",
+		"/usr/include/glib-2.0",
+		"/usr/lib/x86_64-linux-gnu/glib-2.0/include",
+		"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-memory/sc-memory/generated",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
+		"/usr/include",
+		"/usr/include/c++/9",
+		"/usr/include/x86_64-linux-gnu/c++/9",
+		"/usr/include/c++/9/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/9/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : true,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/sctp-server_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 4,
+	"PARSE_CACHE_FILE" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/CMakeFiles/sctp-server_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "",
+	"QT_VERSION_MAJOR" : 5,
+	"SETTINGS_FILE" : "/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/build/sc-network/sctp_server/CMakeFiles/sctp-server_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/main.cpp",
+			"Mu"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpClient.cpp",
+			"Mu"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpCommand.cpp",
+			"Mu"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpEventManager.cpp",
+			"Mu"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpServer.cpp",
+			"Mu"
+		],
+		[
+			"/home/ilya/Desktop/new_era/ostis-example-app/ostis-web-platform/sc-machine/sc-network/sctp_server/sctpStatistic.cpp",
+			"Mu"
+		]
+	],
+	"VERBOSITY" : 0
+}

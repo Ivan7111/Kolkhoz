@@ -1,0 +1,5 @@
+nrel_area <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [площадь* ] (*<- lang_ru;;*);
+   [area* ] (*<- lang_en;;*);;

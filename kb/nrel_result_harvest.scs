@@ -1,0 +1,5 @@
+nrel_result_harvest <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [результат урожая* ] (*<- lang_ru;;*);
+   [result harvest* ] (*<- lang_en;;*);;

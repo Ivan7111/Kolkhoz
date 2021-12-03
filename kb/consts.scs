@@ -1,0 +1,43 @@
+agriculture <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [культура] (* <- lang_ru;; *);
+    [agriculture] (* <- lang_en;; *);;
+
+value <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [величина] (* <- lang_ru;; *);
+    [value] (* <- lang_en;; *);;
+
+kilogram <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [кг] (* <- lang_ru;; *);
+    [kilogram] (* <- lang_en;; *);;
+
+number_of_things <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [шт] (* <- lang_ru;; *);
+    [number of things] (* <- lang_en;; *);;
+	
+ruble <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [р] (* <- lang_ru;; *);
+    [rubles] (* <- lang_en;; *);;
+	
+days <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [дн] (* <- lang_ru;; *);
+    [days] (* <- lang_en;; *);;
+	
+celcium <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [°C] (* <- lang_ru;; *);
+    [celcium] (* <- lang_en;; *);;
+	
+black_earth <- sc_node_not_relation;
+=> nrel_main_idtf: 
+    [чернозем] (* <- lang_ru;; *);
+    [black_earth] (* <- lang_en;; *);;
+
+temp_construction <- sc_node_tuple;;
+soil_construction <- sc_node_tuple;;
+ 
