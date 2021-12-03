@@ -1,4 +1,5 @@
-Potato <- sc_node_class;
+potato <- sc_node_not_relation;
+<- agriculture;
 
 => nrel_main_idtf: 
     [Картофель] (* <- lang_ru;; *);
@@ -11,9 +12,36 @@ Potato <- sc_node_class;
     -> [Картофель - вид клубненосных травянистых растений из рода Паслен](*<-lang_ru;;*);;*);;
 *);
 
-=> nrel_habitat: [Лучшие для картофеля почвы — чернозёмы, дерново-подзолистые, серые лесные, осушенные торфяники; по механическому составу — супеси, лёгкие и средние суглинки. Почва для картофеля должна быть рыхлой: в уплотнённой почве формируются мелкие и деформированные клубни.];
+<= nrel_habitat: [Лучшие для картофеля почвы — чернозёмы, дерново-подзолистые, серые лесные, осушенные торфяники; по механическому составу — супеси, лёгкие и средние суглинки. Почва для картофеля должна быть рыхлой: в уплотнённой почве формируются мелкие и деформированные клубни.];;
 
-=> nrel_context_of_use: {
-	cosmetology;
-	food
-};;
+potato => nrel_productivity: 300;;
+value -> 300;;
+kilogram -> 300;;
+
+potato => nrel_number_of_seeds_per_hectare: 500;;
+value -> 500;;
+number_of_things -> 500;;
+
+potato => nrel_cost_of_seed: 1;;
+value -> 1;;
+ruble -> 1;;
+
+potato => nrel_cost_per_ton: 400;;
+value -> 400;;
+ruble -> 400;;
+
+potato => nrel_growth_time: 57;;
+value -> 57;;
+days -> 57;;
+
+potato => nrel_optimum_temperature: temp_construction;;
+temp_construction -> rrel_from: 10;;
+temp_construction -> rrel_to: 30;;
+value -> 10;;
+value -> 30;;
+celcium -> 10;;
+celcium -> 30;;
+
+potato => nrel_productivity_for_soil: soil_construction;;
+black_earth => soil_construction: 7;;
+value -> 0.7;;
