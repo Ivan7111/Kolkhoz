@@ -1,0 +1,8 @@
+# common
+ims.ostis.kb
+
+# components
+sc-web/components/scg/kb
+../subsystems
+../kb
+../problem-solver
