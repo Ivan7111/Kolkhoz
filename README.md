@@ -3,6 +3,8 @@ JS Component: https://drive.google.com/file/d/1xkidEMbtohUPw1HWXfIhbUl_VgOLk7AK/
 
 Python agents: http://ostis-dev.github.io/sc-machine/python/cpp_wrap/
 
+Если меняется JS - можно сделать grunt build в папке sc-web и просто перезапустить sc_web.sh.
+
 
 ## Version 0.6.0
 
