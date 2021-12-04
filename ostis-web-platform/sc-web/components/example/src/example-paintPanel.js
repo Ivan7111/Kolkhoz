@@ -40,19 +40,14 @@ Example.PaintPanel.prototype = {
         <summary><b> Садоводство </b></summary>
         <p>Кнопки тут</p>
     </details>
-
+    
     <details>
-        <summary><b> Баклажановодство </b></summary>
+        <summary><b> Животноводство </b></summary>
         <p>Кнопки тут</p>
     </details>
 
     <details>
-        <summary><b> Свинки, хрюшки, хряки, сало </b></summary>
-        <p>Кнопки тут</p>
-    </details>
-
-    <details>
-        <summary><b> Хлебушек </b></summary>
+        <summary><b> Лесоводство </b></summary>
         <p>Кнопки тут</p>
     </details>
 
@@ -255,7 +250,7 @@ Example.PaintPanel.prototype = {
 	send ui_main_menu node as parameter and add it in web window history
 	*/
 
-	_soilDropdown: function () {
+	_soilDropdown2: function () {
 		console.log("finding soil types..");
 		var main_menu_addr, nrel_main_idtf_addr;
 		// Resolve sc-addrs.
@@ -279,6 +274,64 @@ Example.PaintPanel.prototype = {
 				});
 		});
 	},
+	
+_soilDropdown: function () {
+	console.log("finding soil types..");
+	var soil_addr, rrel_name;
+	// Resolve sc-addrs.
+	SCWeb.core.Server.resolveScAddr(['soil'], function (keynodes) {
+		soil_addr = keynodes['soil'];
+		SCWeb.core.Server.resolveScAddr(['rrel_name'], function (keynodes1) {
+			rrel_name = keynodes1['rrel_name'];
+			console.log(rrel_name);
+		// Resolve sc-addr of ui_menu_view_full_semantic_neighborhood node
+		window.sctpClient.iterate_elements(SctpIteratorType.SCTP_ITERATOR_3F_A_A, [
+			soil_addr,
+			sc_type_arc_pos_const_perm,
+			sc_type_node]).
+			done(function (soilTypeNodes) {
+				console.log("iterator soilTypeNodes");
+				console.log(soilTypeNodes);
+				var soilTypeNode = soilTypeNodes[2][0];
+				console.log(soilTypeNode);
+				//console.log(soilTypeNodes[2][1]);
+				//console.log(soilTypeNodes[2][2]);
+
+				soilTypeNodes[2].forEach(element => {
+					
+					console.log("try element");
+					console.log(element);
+
+				window.sctpClient.iterate_elements(SctpIteratorType.SCTP_ITERATOR_5F_A_A_A_F, [
+					element,
+					sc_type_arc_pos_const_perm,
+					sc_type_node,
+					sc_type_arc_pos_const_perm,
+					rrel_name]).
+					done(function (identifiers) {
+						console.log("iterator identifiers");
+						console.log(identifiers);
+
+						identifiers.forEach ( soilType => 
+							window.sctpClient.get_link_content(soilType[2], 'string').done(function (content) {
+							console.log("try add");
+							console.log(content);
+
+							var select = document.getElementById("soilType");
+
+							var option = document.createElement('option');
+							option.text = option.value = content;
+							select.add(option, 0);
+							alert('Soil: ' + content);
+								alert('Soil: ' + content);
+						}));
+					}
+					)
+				}); 
+			});					
+			});
+	});
+},
 
 
 	_assTest: function () {
