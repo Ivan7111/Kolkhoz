@@ -1,0 +1,24 @@
+rrel_name <- sc_node_norole_relation;
+
+ => nrel_main_idtf: 
+   [name'] (*<- lang_ru;;*);
+   [название'] (*<- lang_en;;*);;
+   
+   
+soil <- sc_node_not_relation;;
+
+black_earth <- sc_node_not_relation;;
+black_earth -> rrel_name: [black earth];;
+soil -> black_earth;;
+
+sandy_soil <- sc_node_not_relation;;
+sandy_soil -> rrel_name: [sandy soil];;
+soil -> sandy_soil;;
+
+peat_soil <- sc_node_not_relation;;
+peat_soil -> rrel_name: [peat soil];;
+soil -> peat_soil;;
+
+
+
+
