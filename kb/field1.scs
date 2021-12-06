@@ -1,0 +1,5 @@
+field1 <- sc_node_not_relation;
+
+=> nrel_soil_type: black_earth;
+
+=> nrel_area: 40;;
