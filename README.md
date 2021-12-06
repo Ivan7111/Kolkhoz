@@ -9,6 +9,9 @@ Python agents: http://ostis-dev.github.io/sc-machine/python/cpp_wrap/
 https://github.com/Ivan7111/Kolkhoz/blob/main/ostis-web-platform/sc-web/components/example/src/example-paintPanel.js
 
 
+https://github.com/Ivan7111/Kolkhoz/tree/main/problem-solver/py/services/HelloAgent
+
+
 ## Version 0.6.0
 
 This version allows usage of [JSON-based Websocket protocol](http://ostis-dev.github.io/sc-machine/http/websocket/) to communicate with knowledge base.
