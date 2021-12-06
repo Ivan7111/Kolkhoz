@@ -6,6 +6,9 @@ Python agents: http://ostis-dev.github.io/sc-machine/python/cpp_wrap/
 Если меняется JS - можно сделать grunt build в папке sc-web и просто перезапустить sc_web.sh.
 
 
+https://github.com/Ivan7111/Kolkhoz/blob/main/ostis-web-platform/sc-web/components/example/src/example-paintPanel.js
+
+
 ## Version 0.6.0
 
 This version allows usage of [JSON-based Websocket protocol](http://ostis-dev.github.io/sc-machine/http/websocket/) to communicate with knowledge base.
