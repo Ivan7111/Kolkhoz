@@ -1,0 +1,51 @@
+wheat <- sc_node_not_relation;
+<- agriculture;
+
+=> nrel_main_idtf: 
+    [Пшеница] (* <- lang_ru;; *);
+    [Wheat] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Пшеница - род травянистых, в основном однолетних, растений семейства Злаки, или Мятликовые, ведущая зерновая культура во многих страна](*<-lang_ru;;*);;*);;
+*);
+
+<= nrel_habitat: [Пшеница растет везде, кроме тропиков, поскольку многообразие специально созданных сортов позволяет использовать любые почвенные и климатические условия.];;
+
+wheat => nrel_productivity: 5500;;
+value -> 5500;;
+kilogram -> 5500;;
+
+wheat => nrel_number_of_seeds_per_hectare: 4000000;;
+value -> 4000000;;
+number_of_things -> 4000000;;
+
+wheat => nrel_cost_of_seed: 2;;
+value -> 2;;
+ruble -> 2;;
+
+wheat => nrel_cost_per_ton: 72;;
+value -> 72;;
+ruble -> 72;;
+
+wheat => nrel_growth_time: 80;;
+value -> 80;;
+days -> 80;;
+
+wheat => nrel_optimum_temperature: temp_construction;;
+temp_construction -> rrel_from: 3;;
+temp_construction -> rrel_to: 5;;
+value -> 3;;
+value -> 5;;
+celcium -> 3;;
+celcium -> 5;;
+
+wheat => nrel_productivity_for_soil: soil_construction;;
+rendzina => soil_construction: 9;;
+value -> 9;;
+medium_loamy_soil => soil_construction: 8;;
+value -> 8;;
+light_loamy_soil => soil_construction: 7;;
+value -> 7;;

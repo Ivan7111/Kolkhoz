@@ -1,0 +1,42 @@
+agriculture <- sc_node_not_relation;
+
+=> nrel_main_idtf: 
+    [агрокультура] (* <- lang_ru;; *);
+    [agriculture] (* <- lang_en;; *);
+
+<- rrel_key_sc_element: ... (*
+  <- definition ;;
+  => nrel_main_idtf: [Определение](*<- lang_ru;;*);;
+  <= nrel_sc_text_translation: ...(*
+    -> [Агрокультура - совокупность некоторых культурных растений.](*<-lang_ru;;*);;*);;
+*);;
+
+
+oats <- sc_node_not_relation;
+<- agriculture;
+=> nrel_main_idtf: 
+    [овес] (* <- lang_ru;; *);
+    [Oats] (* <- lang_en;; *);;
+	
+	
+rye <- sc_node_not_relation;
+<- agriculture;
+=> nrel_main_idtf: 
+    [рожь] (* <- lang_ru;; *);
+    [Rye] (* <- lang_en;; *);;
+	
+	
+carrot <- sc_node_not_relation;
+<- agriculture;
+=> nrel_main_idtf: 
+    [морковь] (* <- lang_ru;; *);
+    [carrot] (* <- lang_en;; *);;
+	
+	
+beet <- sc_node_not_relation;
+<- agriculture;
+=> nrel_main_idtf: 
+    [свекла] (* <- lang_ru;; *);
+    [beet] (* <- lang_en;; *);;
+	
+	
