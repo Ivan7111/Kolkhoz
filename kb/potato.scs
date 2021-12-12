@@ -44,4 +44,4 @@ celcium -> 30;;
 
 potato => nrel_productivity_for_soil: soil_construction;;
 black_earth => soil_construction: 7;;
-value -> 0.7;;
+value -> 7;;
