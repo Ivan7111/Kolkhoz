@@ -3,7 +3,7 @@ JS Component: https://drive.google.com/file/d/1xkidEMbtohUPw1HWXfIhbUl_VgOLk7AK/
 
 Python agents: http://ostis-dev.github.io/sc-machine/python/cpp_wrap/
 
-Если меняется JS - можно сделать grunt build в папке sc-web и просто перезапустить sc_web.sh.
+Если меняется JS - можно сделать grunt build в папке sc-web и даже не надо перезапускать sc_web.sh, если остис не упал.
 
 
 https://github.com/Ivan7111/Kolkhoz/blob/main/ostis-web-platform/sc-web/components/example/src/example-paintPanel.js
